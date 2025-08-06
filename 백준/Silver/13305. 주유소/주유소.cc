@@ -10,16 +10,16 @@ int main() {
 	int N;
 	cin >> N;
 
-	vector<int> load(N - 1);
-	vector<int> city(N);
+	vector<long long> load(N - 1);
+	vector<long long> city(N);
 
 	for (int i = 0; i < N - 1; i++)
 		cin >> load[i];
 	for (int i = 0; i < N; i++)
 		cin >> city[i];
 
-	int low_city = city[0];
-	int min = low_city * load[0];
+	long long low_city = city[0];
+	long long min = low_city * load[0];
 
 	for (int i = 1; i < N - 1; i++)
 	{
