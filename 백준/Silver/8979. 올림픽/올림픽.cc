@@ -5,7 +5,7 @@
 using namespace std;
 
 struct Country {
-	int num, gold, silver, broze;
+	int num, gold, silver, bronze;
 };
 
 bool compare(const Country& a, const Country& b);
@@ -19,7 +19,7 @@ int main() {
 
 	for (int i = 0; i < N; i++)
 	{
-		cin >> v[i].num >> v[i].gold >> v[i].silver >> v[i].broze;
+		cin >> v[i].num >> v[i].gold >> v[i].silver >> v[i].bronze;
 	}
 
 	sort(v.begin(), v.end(), compare);
@@ -32,9 +32,9 @@ int main() {
 	{
 		if (i > 0 && (v[i].gold != prev.gold ||
 			v[i].silver != prev.silver ||
-			v[i].broze != prev.broze))
+			v[i].bronze != prev.bronze))
 		{
-			rank += i;
+			rank = i + 1;
 		}
 		if (v[i].num == K)
 		{
@@ -50,5 +50,5 @@ int main() {
 bool compare(const Country& a, const Country& b) {
 	if (a.gold != b.gold) return a.gold > b.gold;
 	if (a.silver != b.silver) return a.silver > b.silver;
-	else return a.broze > b.broze;
+	else return a.bronze > b.bronze;
 }
