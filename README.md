@@ -1,1 +1,1 @@
-# baekjoon 알고리즘 문제 연습
+# baekjoon 알고리즘 문제 연습 (C++)
